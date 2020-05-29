@@ -154,8 +154,8 @@ export default () => (
       const { onCleanSelected } = props;
       return (
         <Space>
-          <a>自定义</a>
-          <a onClick={onCleanSelected}>清空</a>
+          <a>customize</a>
+          <a onClick={onCleanSelected}>Clear</a>
         </Space>
       );
     }}
