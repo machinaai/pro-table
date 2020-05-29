@@ -53,8 +53,8 @@ export type ProColumnsValueTypeFunction<T> = (
   item: T,
 ) => ProColumnsValueType | ProColumnsValueObjectType;
 
-const moneyIntl = new Intl.NumberFormat('zh-Hans-CN', {
-  currency: 'CNY',
+const moneyIntl = new Intl.NumberFormat('en-Hans-US', {
+  currency: 'USD',
   style: 'currency',
   minimumFractionDigits: 2,
 });
@@ -91,7 +91,7 @@ const defaultRenderTextByObject = (text: string | number, value: ProColumnsValue
     if (value.locale === 'ms_MY') {
       return msMoneyIntl.format(text as number);
     }
-    return moneyIntl.format(text as number);
+    return enMoneyIntl.format(text as number);
   }
   if (value.type === 'percent') {
     return <Percent value={text} showSymbol={value.showSymbol} precision={value.precision} />;

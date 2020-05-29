@@ -53,7 +53,7 @@ const zhTWIntl = createIntl('zh_TW', zhTW);
 
 export { enUSIntl, zhCNIntl, viVNIntl, itITIntl, jaJPIntl, esESIntl, ruRUIntl, msMYIntl, zhTWIntl };
 
-const IntlContext = React.createContext<IntlType>(zhCNIntl);
+const IntlContext = React.createContext<IntlType>(esESIntl);
 
 const { Consumer: IntlConsumer, Provider: IntlProvider } = IntlContext;
 
